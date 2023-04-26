@@ -11,6 +11,9 @@
 		964C35D629BA7B8E00D1187F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964C35D529BA7B8E00D1187F /* ContentView.swift */; };
 		964C35D829BA7B8F00D1187F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 964C35D729BA7B8F00D1187F /* Assets.xcassets */; };
 		964C35DB29BA7B8F00D1187F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 964C35DA29BA7B8F00D1187F /* Preview Assets.xcassets */; };
+		9667954029E0CB0D002CC4CB /* VideoPlayerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9667953F29E0CB0D002CC4CB /* VideoPlayerRepresentable.swift */; };
+		96B9282029BF7B04000AB2AE /* VideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B9281F29BF7B04000AB2AE /* VideoPlayerViewController.swift */; };
+		96B9282329BF7FFD000AB2AE /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B9282229BF7FFD000AB2AE /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		964C35D529BA7B8E00D1187F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		964C35D729BA7B8F00D1187F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		964C35DA29BA7B8F00D1187F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9667953F29E0CB0D002CC4CB /* VideoPlayerRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerRepresentable.swift; sourceTree = "<group>"; };
+		96B9281F29BF7B04000AB2AE /* VideoPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewController.swift; sourceTree = "<group>"; };
+		96B9282229BF7FFD000AB2AE /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +57,12 @@
 		964C35D229BA7B8E00D1187F /* ScreenCapture */ = {
 			isa = PBXGroup;
 			children = (
+				96B9282129BF7B08000AB2AE /* Video */,
 				964C35D329BA7B8E00D1187F /* ScreenCaptureApp.swift */,
 				964C35D529BA7B8E00D1187F /* ContentView.swift */,
 				964C35D729BA7B8F00D1187F /* Assets.xcassets */,
 				964C35D929BA7B8F00D1187F /* Preview Content */,
+				96B9282229BF7FFD000AB2AE /* ViewModel.swift */,
 			);
 			path = ScreenCapture;
 			sourceTree = "<group>";
@@ -65,6 +73,15 @@
 				964C35DA29BA7B8F00D1187F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		96B9282129BF7B08000AB2AE /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				96B9281F29BF7B04000AB2AE /* VideoPlayerViewController.swift */,
+				9667953F29E0CB0D002CC4CB /* VideoPlayerRepresentable.swift */,
+			);
+			path = Video;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +154,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9667954029E0CB0D002CC4CB /* VideoPlayerRepresentable.swift in Sources */,
+				96B9282029BF7B04000AB2AE /* VideoPlayerViewController.swift in Sources */,
 				964C35D629BA7B8E00D1187F /* ContentView.swift in Sources */,
+				96B9282329BF7FFD000AB2AE /* ViewModel.swift in Sources */,
 				964C35D429BA7B8E00D1187F /* ScreenCaptureApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,13 +287,15 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ScreenCapture/Preview Content\"";
+				DEVELOPMENT_TEAM = 9T35TD23LG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Take Screenshots";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -295,13 +317,15 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ScreenCapture/Preview Content\"";
+				DEVELOPMENT_TEAM = 9T35TD23LG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Take Screenshots";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
